@@ -1,0 +1,24 @@
+
+:root {
+    /* Cores principais */
+    --primary-color: #409afa;
+    --secondary-color: #007bff;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+
+    /* Tipografia */
+    --font-family-base: 'Arial, sans-serif';
+    --font-size-base: 16px;
+    --font-size-lg: 1.25rem;
+    --font-size-sm: 0.875rem;
+
+    /* Espaçamento */
+    --spacer: 1rem;
+    --spacer-sm: 0.5rem;
+    --spacer-lg: 2rem;
+}
+
