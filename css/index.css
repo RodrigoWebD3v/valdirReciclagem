@@ -182,8 +182,6 @@ body p {
     color: #045f41;
 }
 
-
-
 .materiais {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -211,12 +209,10 @@ body p {
     color: #ffffff;
     text-align: center;
     padding: 20px;
-
     width: 100%;
 }
 
 .footer p {
-    margin: 0;
     font-size: 14px;
 }
 
