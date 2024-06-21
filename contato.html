@@ -1,90 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VC Reciclagem - Contato</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/contato.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-</head>
-<body>
-    <header class="header">
-        <section class="section-header">
-            <a href="index.html"><img src="./img/logo.jpg" alt="logo-imagem" class="logo"></a>
-            <nav>
-                <ul class="links-nav">
-                    <li class="item-link"><a href="index.html#home">Home</a></li>
-                    <li class="item-link"><a href="index.html#sobre">Sobre</a></li>
-                    <li class="item-link"><a href="contato.html">Contato</a></li>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VC Reciclagem - Contato</title>
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/contato.css">
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <section class="section-header">
+                <a href="index.html"><img src="./img/logo.jpg" alt="logo-imagem"
+                        class="logo"></a>
+                <nav>
+                    <ul class="links-nav">
+                        <li class="item-link"><a
+                                href="index.html#home">Home</a></li>
+                        <li class="item-link"><a
+                                href="index.html#sobre">Sobre</a></li>
+                        <li class="item-link"><a
+                                href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <main class="main" id="contato">
+            <section class="form-section">
+                <h2>Entre em Contato Conosco</h2>
+                <form id="meuFormulario" method="POST">
+                    <fieldset class="form-group">
+                        <legend>Informações de Contato</legend>
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="material">Tipo de Material</label>
+                        <section class="checkbox-group">
+                            <label class="checkbox-container">
+                                Plástico
+                                <input type="checkbox" name="material"
+                                    value="Plástico">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">
+                                Papelão
+                                <input type="checkbox" name="material"
+                                    value="Papelão">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">
+                                Alumínio
+                                <input type="checkbox" name="material"
+                                    value="Alumínio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">
+                                Ferro
+                                <input type="checkbox" name="material"
+                                    value="Plástico">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">
+                                Aço
+                                <input type="checkbox" name="material"
+                                    value="Papelão">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">
+                                Metal
+                                <input type="checkbox" name="material"
+                                    value="Alumínio">
+                                <span class="checkmark"></span>
+                            </label>
+                        </section>
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5"
+                            required></textarea>
+                        <button type="submit">Enviar</button>
+                    </fieldset>
+                </form>
+            </section>
+            <section class="contact-info">
+                <h2>Nossos Telefones</h2>
+                <ul>
+                    <li><strong>Telefone:</strong> (48) 99978-7839 <button
+                            class="copy-btn" data-text="(48) 99978-7839"><img
+                                src="img/copyPaste.svg"
+                                alt="botao copiar contato"></button></li>
+                    <li><strong>Telefone:</strong> (48) 99963-9821 <button
+                            class="copy-btn" data-text="(48) 99963-9821"><img
+                                src="img/copyPaste.svg"
+                                alt="botao copiar contato"></button></li>
                 </ul>
-            </nav>
-        </section>
-    </header>
-    <main class="main" id="contato">
-        <section class="form-section">
-            <h2>Entre em Contato Conosco</h2>
-            <form id="meuFormulario" method="POST">
-                <fieldset class="form-group">
-                    <legend>Informações de Contato</legend>
-                    <label for="name">Nome</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="material">Tipo de Material</label>
-                    <section class="checkbox-group">
-                        <label class="checkbox-container">
-                            Plástico
-                            <input type="checkbox" name="material" value="Plástico">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="checkbox-container">
-                            Papelão
-                            <input type="checkbox" name="material" value="Papelão">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="checkbox-container">
-                            Alumínio
-                            <input type="checkbox" name="material" value="Alumínio">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="checkbox-container">
-                            Ferro
-                            <input type="checkbox" name="material" value="Plástico">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="checkbox-container">
-                            Aço
-                            <input type="checkbox" name="material" value="Papelão">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="checkbox-container">
-                            Metal
-                            <input type="checkbox" name="material" value="Alumínio">
-                            <span class="checkmark"></span>
-                        </label>
-                    </section>
-                    <label for="message">Mensagem</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                    <button type="submit">Enviar</button>
-                </fieldset>
-            </form>
-        </section>
-        <section class="contact-info">
-            <h2>Nossos Telefones</h2>
-            <ul>
-                <li><strong>Telefone:</strong> (48) 99978-7839 <button class="copy-btn" data-text="(48) 99978-7839"><img src="img/copyPaste.svg" alt="botao copiar contato"></button></li>
-                <li><strong>Telefone:</strong> (48) 99963-9821 <button class="copy-btn" data-text="(48) 99963-9821"><img src="img/copyPaste.svg" alt="botao copiar contato"></button></li>
-            </ul>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <footer class="footer">
-        <p>&copy; 2024 VC Reciclagem. Todos os direitos reservados.</p>
-    </footer>
-    
-    <script src="./javascript/contato.js">
+        <footer class="footer">
+            <p>&copy; 2024 VC Reciclagem. Todos os direitos reservados.</p>
+        </footer>
+
+        <script src="./javascript/contato.js">
         
     </script>
-</body>
+    </body>
 </html>
