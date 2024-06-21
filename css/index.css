@@ -262,6 +262,11 @@ body p {
     .hero img {
         max-width: 95%;
     }
+
+    .item-link:hover {
+        transform: none;
+        border-bottom: none;
+    }
 }
 
 @media (max-width: 690px) {
