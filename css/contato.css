@@ -1,0 +1,209 @@
+/* Form Section */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    margin: 20px;
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.form-section h2 {
+    font-weight: bold;
+    font-size: 28px;
+    color: #045f41;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form fieldset.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    margin: auto;
+}
+
+form fieldset.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #045f41;
+    
+}
+
+form fieldset.form-group input,
+form fieldset.form-group textarea {
+    padding: 15px; /* Aumentei o padding para aumentar o tamanho */
+    border: 1px solid #045f41;
+    border-radius: 5px;
+    font-size: 18px; /* Aumentei o tamanho da fonte */
+    outline: none;
+    
+}
+
+form fieldset.form-group input:focus,
+form fieldset.form-group textarea:focus {
+    border-color: #033e2c;
+    box-shadow: 0 0 5px rgba(4, 95, 65, 0.5);
+}
+
+form fieldset.form-group button {
+    padding: 10px 20px;
+    background-color: #045f41;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form fieldset.form-group button:hover {
+    background-color: #033e2c;
+}
+
+/* Checkbox Styles */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    color: #045f41;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 2px solid #045f41;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #045f41;
+    border-color: #033e2c;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* Contact Info Section */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    margin: 20px;
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.contact-info h2 {
+    font-weight: bold;
+    font-size: 28px;
+    color: #045f41;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-info ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin: auto;
+    max-width: 600px;
+}
+
+.contact-info li {
+    font-size: 18px;
+    color: #333;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.contact-info li strong {
+    color: #045f41;
+}
+.copy-btn{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.copy-btn img{
+    max-width: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .contact-info ul {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 600px) {
+    form fieldset.form-group {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 370px) {
+    form fieldset.form-group {
+        width: 100%;
+        max-width: none;
+    }
+}

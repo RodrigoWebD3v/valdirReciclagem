@@ -1,7 +1,19 @@
+// window.addEventListener('resize', ()=>{
+//     const larguraTela = window.innerWidth;
+//     const alturaTela = window.innerHeight;
+//     console.log(`Resolução da tela: ${larguraTela} x ${alturaTela}`)
+    
+// });
+
+
+
+
 function StartSlide(){
 const slide1 = document.getElementById("hero-1");
 const slide2 = document.getElementById("hero-2");
 const slide3 = document.getElementById("hero-3");
+
+
 
 let slideAtual = 1
 
