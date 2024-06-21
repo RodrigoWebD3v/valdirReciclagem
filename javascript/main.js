@@ -1,12 +1,3 @@
-// window.addEventListener('resize', ()=>{
-//     const larguraTela = window.innerWidth;
-//     const alturaTela = window.innerHeight;
-//     console.log(`Resolução da tela: ${larguraTela} x ${alturaTela}`)
-    
-// });
-
-
-
 
 function StartSlide(){
 const slide1 = document.getElementById("hero-1");

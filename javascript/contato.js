@@ -58,8 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Envie o e-mail usando EmailJS
         emailjs.send('service_0tehlml', 'template_bqp9sjc', params)
             .then(function(response) {
-                console.log('E-mail enviado com sucesso!', response);
-                // Limpe os campos do formulário ou adicione uma mensagem de sucesso aqui
+                // Limpa os campos do formulário ou adicione uma mensagem de sucesso aqui
                 form.reset(); // Limpa o formulário após o envio
             }, function(error) {
                 console.error('Erro ao enviar e-mail:', error);
