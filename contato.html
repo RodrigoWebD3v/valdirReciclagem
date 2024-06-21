@@ -6,6 +6,7 @@
     <title>VC Reciclagem - Contato</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/contato.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -15,7 +16,6 @@
                 <ul class="links-nav">
                     <li class="item-link"><a href="index.html#home">Home</a></li>
                     <li class="item-link"><a href="index.html#sobre">Sobre</a></li>
-                    <li class="item-link"><a href="servicos.html">Serviços</a></li>
                     <li class="item-link"><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
@@ -24,7 +24,7 @@
     <main class="main" id="contato">
         <section class="form-section">
             <h2>Entre em Contato Conosco</h2>
-            <form action="submit_form.php" method="POST">
+            <form id="meuFormulario" method="POST">
                 <fieldset class="form-group">
                     <legend>Informações de Contato</legend>
                     <label for="name">Nome</label>
@@ -32,7 +32,7 @@
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
                     <label for="material">Tipo de Material</label>
-                    <div class="checkbox-group">
+                    <section class="checkbox-group">
                         <label class="checkbox-container">
                             Plástico
                             <input type="checkbox" name="material" value="Plástico">
@@ -63,7 +63,7 @@
                             <input type="checkbox" name="material" value="Alumínio">
                             <span class="checkmark"></span>
                         </label>
-                    </div>
+                    </section>
                     <label for="message">Mensagem</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                     <button type="submit">Enviar</button>
@@ -79,6 +79,9 @@
         </section>
     </main>
 
+    <footer class="footer">
+        <p>&copy; 2024 VC Reciclagem. Todos os direitos reservados.</p>
+    </footer>
     
     <script src="./javascript/contato.js">
         

@@ -30,3 +30,50 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('meuFormulario');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita o envio padrão do formulário
+
+        // Preencha os campos do formulário aqui
+        const toName = document.getElementById('name').value;
+        const toEmail = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const materials = getSelectedMaterials(); // Função para obter materiais selecionados
+
+        emailjs.init('71r0raaV8zfdlPp7T');
+
+        // Parâmetros para enviar o e-mail
+        const params = {
+            to_name: toName,
+            to_email: toEmail,
+            from_name: 'VC Reciclagem', // Nome da empresa
+            message: message,
+            materials: materials
+        };
+
+        // Envie o e-mail usando EmailJS
+        emailjs.send('service_0tehlml', 'template_bqp9sjc', params)
+            .then(function(response) {
+                console.log('E-mail enviado com sucesso!', response);
+                // Limpe os campos do formulário ou adicione uma mensagem de sucesso aqui
+                form.reset(); // Limpa o formulário após o envio
+            }, function(error) {
+                console.error('Erro ao enviar e-mail:', error);
+                // Adicione uma mensagem de erro aqui, se necessário
+            });
+    });
+
+    // Função para obter os materiais selecionados
+    function getSelectedMaterials() {
+        const checkboxes = document.querySelectorAll('input[name="material"]:checked');
+        const selectedMaterials = [];
+        checkboxes.forEach(function(checkbox) {
+            selectedMaterials.push(checkbox.value);
+        });
+        return selectedMaterials.join(', '); // Retorna os materiais como uma string separada por vírgula
+    }
+});
