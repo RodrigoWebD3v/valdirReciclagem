@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         // Envie o e-mail usando EmailJS
-        emailjs.send('service_0tehlml', 'template_bqp9sjc', params)
+        emailjs.send('service_vefmw1b', 'template_bqp9sjc', params)
             .then(function(response) {
                 // Limpa os campos do formulário ou adicione uma mensagem de sucesso aqui
                 form.reset(); // Limpa o formulário após o envio
