@@ -364,6 +364,12 @@ h2{
    
 }
 
+@media (max-width: 350px) {
+    .hero img {
+        max-width: 250px;
+    }
+}
+
 @media (max-width: 300px) {
     .hero img {
         max-width: 200px;
