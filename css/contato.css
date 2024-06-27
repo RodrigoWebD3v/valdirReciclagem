@@ -228,7 +228,13 @@ form fieldset.form-group button:hover {
     
 
     form fieldset.form-group {
-        width: 100%;
+        max-width: 100%;
         max-width: none;
     }
+
+    .form-section{
+        max-width: 300px;
+    }
 }
+
+
